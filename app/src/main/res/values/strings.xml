@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">BlaBlaBla</string>
+    <string name="save_copy"><![CDATA[Save & Copy]]></string>
+
+
+    <string name="lvl_1">
+       {"gameId":"0","modelList":[
+        {"tileBg":5,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":0,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":1,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":2,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":3,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":4,"edgePos":-1},
+        {"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":5,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":6,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":7,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":8,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":9,"edgePos":-1},
+        {"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":10,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":11,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":12,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":13,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":14,"edgePos":-1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":15,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":16,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":17,"edgePos":1},
+        {"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":18,"edgePos":1},
+        {"tileBg":7,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":0,"arrayPos":19,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":20,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":21,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":22,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":23,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":24,"edgePos":-1}
+        ],"matrixY":"5","matrixX":"5"}
+    </string>
+
+    <string name="lvl_2">
+        {"gameId":"2","modelList":[
+        {"tileBg":5,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":0,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":1,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":2,"edgePos":-1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":3,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":4,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":5,"edgePos":-1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":6,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":7,"edgePos":1},
+        {"tileBg":7,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":0,"arrayPos":8,"edgePos":1}
+        ],"matrixY":"3","matrixX":"3"}
+    </string>
+
+</resources>
