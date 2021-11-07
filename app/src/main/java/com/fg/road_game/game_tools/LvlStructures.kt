@@ -1,4 +1,4 @@
-package com.fg.blablabla.game_tools
+package com.fg.road_game.game_tools
 
 data class LvlStructures(
         val lvlId: Int?,

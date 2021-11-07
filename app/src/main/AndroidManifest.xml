@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fg.blablabla">
+    package="com.fg.road_game">
+
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BlaBlaBla">
-        <activity android:name=".MenuActivity">
+        <activity android:name="com.fg.road_game.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".editor.CreateLvlActivity" />
+        <activity android:name="com.fg.road_game.MainActivity"/>
+        <activity android:name="com.fg.road_game.editor.CreateLvlActivity" />
     </application>
 
 </manifest>

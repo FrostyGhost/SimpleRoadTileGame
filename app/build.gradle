@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.2"
 
     buildFeatures {
@@ -15,9 +15,9 @@ android {
 
 
     defaultConfig {
-        applicationId "com.fg.blablabla"
+        applicationId "com.fg.road_game"
         minSdkVersion 22
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -28,6 +28,21 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                project.ext {
+                    if (outputFileName.contains("release")) appName = 'frosty_roadGame_release'
+                    else appName = 'frosty_roadGame'
+                }
+                def formattedDate = new Date().format('yyyy-MM-dd')
+                def newName = outputFileName
+                newName = newName.replace("app-", "$project.ext.appName-$formattedDate")
+                newName = newName.replace("debug", "versionName-" + versionName)
+                newName = newName.replace("release", "versionName-" + versionName)
+                outputFileName = newName
+            }
         }
     }
     compileOptions {
@@ -40,9 +55,8 @@ android {
 }
 
 dependencies {
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.core:core-ktx:1.7.0' //1.3.2
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -56,4 +70,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
 
+    implementation platform('com.google.firebase:firebase-bom:27.0.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }
+
+apply plugin: 'com.google.gms.google-services'

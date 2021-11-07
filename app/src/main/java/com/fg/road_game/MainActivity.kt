@@ -1,4 +1,4 @@
-package com.fg.blablabla
+package com.fg.road_game
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -10,10 +10,14 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.fg.blablabla.game_tools.GameTile
-import com.fg.blablabla.game_tools.TileModel
-import com.fg.blablabla.grapf.DepthFirstSearch
-import com.fg.blablabla.grapf.Dijkstra
+import com.fg.road_game.game_tools.GameTile
+import com.fg.road_game.game_tools.TileModel
+import com.fg.road_game.grapf.DepthFirstSearch
+import com.fg.road_game.grapf.Dijkstra
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 
@@ -42,10 +46,13 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
     private lateinit var sp: SharedPreferences
 
     private lateinit var tileModelList : List<TileModel>
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        firebaseAnalytics = Firebase.analytics
         sp = getSharedPreferences(Constant.BUNDLE_ARGS.SharedPreferences, Context.MODE_PRIVATE)
         depthFirstSearchExampleNeighbourList =  DepthFirstSearch(this)
 
@@ -56,7 +63,7 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
     private fun getArgs(){
         testLvLString = intent.getBooleanExtra(Constant.BUNDLE_ARGS.testLvl, false)
         if (testLvLString){
-            val jsonParser = com.fg.blablabla.game_tools.JsonParser()
+            val jsonParser = com.fg.road_game.game_tools.JsonParser()
             val  lvl = jsonParser.getLvl(sp.getString(Constant.BUNDLE_ARGS.testLvl, "")!!)
             tileModelList = lvl!!.tilesList.toList()
             matrixY = lvl.matrixX!!
@@ -65,16 +72,19 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
         }
 
         selectedLvl = intent.getIntExtra(Constant.BUNDLE_ARGS.selectedNum, -1)
+
         if (selectedLvl != -1){
             try {
-                val jsonParser = com.fg.blablabla.game_tools.JsonParser()
+                val jsonParser = com.fg.road_game.game_tools.JsonParser()
                 val  lvl = jsonParser.getLvl(getString(Constant.BASE_LVL_ELEMENT.lvls[selectedLvl]))
                 tileModelList = lvl!!.tilesList.toList()
                 matrixY = lvl.matrixX!!
                 matrixX = lvl.matrixY!!
                 createGameBoard()
+                logStartGame(selectedLvl.toString())
             }catch (e:Exception){
                 Toast.makeText(this, "Вийшло", Toast.LENGTH_SHORT).show()
+                logError("jsonParser error + $e")
             }
         }
     }
@@ -325,6 +335,8 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
                 sp.edit().putInt(Constant.BUNDLE_ARGS.currentLvl, sp.getInt(Constant.BUNDLE_ARGS.currentLvl, -1) +1 ).apply();
                 Log.e("QQ", " зберегло ")
             }
+
+            logEndGame(selectedLvl.toString())
         }else{
             Log.e("QQ", "Не Вийшло")
         }
@@ -345,4 +357,21 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
         rowsList.add(row_11)
     }
 
+    private fun logError(error :String?){
+        firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.GAME_ERROR) {
+            param(FirebaseAnalyticsConst.LVL_ERROR, error?: "do not selected")
+        }
+    }
+
+    private fun logEndGame(selectedLvl :String?){
+        firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.WIN_GAME) {
+            param(FirebaseAnalyticsConst.LVL_NAME, selectedLvl?: "do not selected")
+        }
+    }
+
+    private fun logStartGame(selectedLvl :String?){
+        firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.START_GAME) {
+            param(FirebaseAnalyticsConst.LVL_NAME, selectedLvl?: "do not selected")
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package com.fg.blablabla.grapf;
+package com.fg.road_game.grapf;
 
 public class Dijkstra {
     public static int [][] graph;

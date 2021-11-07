@@ -1,4 +1,4 @@
-package com.fg.blablabla
+package com.fg.road_game
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

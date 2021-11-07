@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "849289312898",
+    "project_id": "roadgame-6d67e",
+    "storage_bucket": "roadgame-6d67e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849289312898:android:8a652936c90b817da5129b",
+        "android_client_info": {
+          "package_name": "com.fg.road_game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849289312898-rs7l932b37rrenlvqn0d15pvq21hkrje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr-R7Cg8TOceOhN2BP1XcneKG5DENUbTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849289312898-rs7l932b37rrenlvqn0d15pvq21hkrje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

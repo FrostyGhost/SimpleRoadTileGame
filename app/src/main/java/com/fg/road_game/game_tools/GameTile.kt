@@ -1,10 +1,8 @@
-package com.fg.blablabla.game_tools
+package com.fg.road_game.game_tools
 
-import android.R
 import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
-import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 
 
@@ -46,7 +44,7 @@ class GameTile : AppCompatTextView {
         rotatePos++
         this.rotation = this.rotation + 90
 
-        if (rotatePos == 3){
+        if (rotatePos == 4){ //було значення 3 все працювало, але були проблемки при створенні рівнів
             rotatePos = 0
         }
     }

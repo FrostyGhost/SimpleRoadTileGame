@@ -1,4 +1,4 @@
-package com.fg.blablabla
+package com.fg.road_game
 
 class Constant {
 

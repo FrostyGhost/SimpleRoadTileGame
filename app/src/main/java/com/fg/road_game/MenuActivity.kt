@@ -1,6 +1,5 @@
-package com.fg.blablabla
+package com.fg.road_game
 
-import android.R.attr
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
@@ -13,18 +12,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.core.view.marginBottom
-import com.fg.blablabla.editor.CreateLvlActivity
+import com.fg.road_game.editor.CreateLvlActivity
+import com.google.firebase.FirebaseApp
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_menu2.*
-import android.R.attr.bottom
-
-import android.R.attr.right
-
-import android.R.attr.top
-
-import android.R.attr.left
-
-
 
 
 class MenuActivity : AppCompatActivity() {
@@ -37,9 +31,14 @@ class MenuActivity : AppCompatActivity() {
     private var h: Int = 300
 
     private lateinit var sp: SharedPreferences
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        firebaseAnalytics = Firebase.analytics
+//        firebaseAnalytics = FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_menu2)
     }
 
@@ -130,7 +129,7 @@ class MenuActivity : AppCompatActivity() {
 
         btn_testLvL.setOnClickListener {
             val clipboard: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val jsonParser = com.fg.blablabla.game_tools.JsonParser()
+            val jsonParser = com.fg.road_game.game_tools.JsonParser()
             val  lvl = jsonParser.getLvl(clipboard.text.toString())
             if (lvl == null){
                 Toast.makeText(this, "СКОПІЮЙТЕ КОРЕКТНИЙ РІВЕНЬ", Toast.LENGTH_SHORT).show()
@@ -142,4 +141,11 @@ class MenuActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun logError(error :String?){
+        firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.GAME_ERROR) {
+            param(FirebaseAnalyticsConst.LVL_ERROR, error?: "menu error")
+        }
+    }
+
 }

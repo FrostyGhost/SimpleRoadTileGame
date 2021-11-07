@@ -1,4 +1,4 @@
-package com.fg.blablabla.editor
+package com.fg.road_game.editor
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -11,9 +11,9 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import com.fg.blablabla.R
-import com.fg.blablabla.game_tools.GameTile
-import com.fg.blablabla.game_tools.TileModel
+import com.fg.road_game.R
+import com.fg.road_game.game_tools.GameTile
+import com.fg.road_game.game_tools.TileModel
 import kotlinx.android.synthetic.main.create_lvl.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -75,8 +75,8 @@ class CreateLvlActivity : Activity() {
             saveLvl()
         }
         defultValues.setOnClickListener {
-            et_x.setText("5")
-            et_y.setText("5")
+            et_x.setText("8")
+            et_y.setText("10")
             et_id.setText("0")
             createGameBoard()
         }
