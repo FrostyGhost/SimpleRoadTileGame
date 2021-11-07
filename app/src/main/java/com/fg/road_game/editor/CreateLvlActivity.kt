@@ -76,7 +76,7 @@ class CreateLvlActivity : Activity() {
         }
         defultValues.setOnClickListener {
             et_x.setText("8")
-            et_y.setText("10")
+            et_y.setText("11")
             et_id.setText("0")
             createGameBoard()
         }
