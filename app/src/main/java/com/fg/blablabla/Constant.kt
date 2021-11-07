@@ -17,7 +17,15 @@ class Constant {
 
         var lvls = arrayOf(
                 R.string.lvl_1,
-                R.string.lvl_2
+                R.string.lvl_2,
+                R.string.lvl_3,
+                R.string.lvl_4,
+                R.string.lvl_5,
+                R.string.lvl_6,
+                R.string.lvl_7,
+                R.string.lvl_8,
+                R.string.lvl_9,
+                R.string.lvl_10
         )
     }
 

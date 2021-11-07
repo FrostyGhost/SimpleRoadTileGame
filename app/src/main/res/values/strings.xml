@@ -47,4 +47,117 @@
         ],"matrixY":"3","matrixX":"3"}
     </string>
 
+    <string name="lvl_3">
+        {"gameId":"3","modelList":[
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":0,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":1,"edgePos":1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":2,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":3,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":4,"edgePos":1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":5,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":6,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":7,"edgePos":-1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":8,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":9,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":10,"edgePos":1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":11,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":12,"edgePos":1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":13,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":14,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":15,"edgePos":-1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":16,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":17,"edgePos":1},
+        {"tileBg":6,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":18,"edgePos":1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":19,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":20,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":21,"edgePos":-1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":22,"edgePos":1},
+        {"tileBg":7,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":0,"arrayPos":23,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":24,"edgePos":1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":25,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":26,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":27,"edgePos":-1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":28,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":29,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":30,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":31,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":32,"edgePos":-1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":33,"edgePos":-1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":34,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":35,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":36,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":37,"edgePos":-1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":38,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":39,"edgePos":1},
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":40,"edgePos":-1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":41,"edgePos":1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":42,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":43,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":44,"edgePos":1},
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":45,"edgePos":1},
+        {"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":46,"edgePos":1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":47,"edgePos":1}
+        ],"matrixY":"8","matrixX":"6"}
+    </string>
+
+    <string name="lvl_4">
+        {"gameId":"4","modelList":[
+        {"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":0,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":1,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":2,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":3,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":4,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":5,"edgePos":-1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":6,"edgePos":1},{"tileBg":5,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":7,"edgePos":1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":8,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":9,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":10,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":11,"edgePos":-1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":12,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":13,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":14,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":15,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":16,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":17,"edgePos":-1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":18,"edgePos":1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":19,"edgePos":1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":20,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":21,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":22,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":23,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":24,"edgePos":1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":25,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":26,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":27,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":28,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":29,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":30,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":31,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":32,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":33,"edgePos":-1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":34,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":35,"edgePos":1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":36,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":37,"edgePos":1},
+        {"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":38,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":39,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":40,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":41,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":42,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":43,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":44,"edgePos":-1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":45,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":46,"edgePos":-1},{"tileBg":8,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":47,"edgePos":1}],"matrixY":"8","matrixX":"6"}
+    </string>
+
+    <string name="lvl_5">
+        {"gameId":"5","modelList":[
+        {"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":0,"edgePos":-1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":1,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":2,"edgePos":1},{"tileBg":5,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":3,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":4,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":5,"edgePos":-1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":6,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":7,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":8,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":9,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":10,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":11,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":12,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":13,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":14,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":15,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":16,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":17,"edgePos":-1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":18,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":19,"edgePos":1},{"tileBg":3,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":20,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":21,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":22,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":23,"edgePos":-1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":24,"edgePos":1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":25,"edgePos":1},{"tileBg":5,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":26,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":27,"edgePos":-1},{"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":28,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":29,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":30,"edgePos":-1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":31,"edgePos":1},{"tileBg":2,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":1,"rightPos":1,"arrayPos":32,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":33,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":34,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":35,"edgePos":-1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":36,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":37,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":38,"edgePos":1},
+        {"tileBg":1,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":1,"rightPos":1,"arrayPos":39,"edgePos":1},{"tileBg":0,"rotatePos":0,"topPos":1,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":40,"edgePos":1},{"tileBg":4,"rotatePos":0,"topPos":1,"bottomPos":0,"leftPos":0,"rightPos":1,"arrayPos":41,"edgePos":1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":42,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":43,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":44,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":45,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":46,"edgePos":-1},{"tileBg":9,"rotatePos":0,"topPos":0,"bottomPos":0,"leftPos":0,"rightPos":0,"arrayPos":47,"edgePos":-1}],"matrixY":"8","matrixX":"6"}
+    </string>
+
+    <string name="lvl_6">
+
+    </string>
+
+    <string name="lvl_7">
+
+    </string>
+
+    <string name="lvl_8">
+
+    </string>
+
+    <string name="lvl_9">
+
+    </string>
+
+    <string name="lvl_10">
+
+    </string>
+
+    <string name="lvl_11">
+
+    </string>
+
+    <string name="lvl_12">
+
+    </string>
+
+    <string name="lvl_13">
+
+    </string>
+
+    <string name="lvl_14">
+
+    </string>
+
+    <string name="lvl_15">
+
+    </string>
+
+    <string name="lvl_16">
+
+    </string>
+
+    <string name="lvl_17">
+
+    </string>
+
 </resources>

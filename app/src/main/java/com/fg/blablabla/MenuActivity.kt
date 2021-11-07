@@ -1,5 +1,6 @@
 package com.fg.blablabla
 
+import android.R.attr
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
@@ -12,8 +13,19 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.core.view.marginBottom
 import com.fg.blablabla.editor.CreateLvlActivity
 import kotlinx.android.synthetic.main.activity_menu2.*
+import android.R.attr.bottom
+
+import android.R.attr.right
+
+import android.R.attr.top
+
+import android.R.attr.left
+
+
+
 
 class MenuActivity : AppCompatActivity() {
 
@@ -21,6 +33,7 @@ class MenuActivity : AppCompatActivity() {
     private var currLvl = 1
     private val maxLvl=50
     private var lvl = 0
+    private val margin = 20
     private var h: Int = 300
 
     private lateinit var sp: SharedPreferences
@@ -28,11 +41,24 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu2)
+    }
 
-        sp = getSharedPreferences(Constant.BUNDLE_ARGS.SharedPreferences, Context.MODE_PRIVATE)
-        currLvl = sp.getInt(Constant.BUNDLE_ARGS.currentLvl, 0)
+    override fun onResume() {
+        super.onResume()
+        setupLvl()
+    }
+
+    private fun setupLvl(){
+        getCurrentLvl()
+        lvl_container.removeAllViews()
         setupDisplay()
         setupOthersBtnListener()
+    }
+
+    private fun getCurrentLvl(){
+        lvl = 0
+        sp = getSharedPreferences(Constant.BUNDLE_ARGS.SharedPreferences, Context.MODE_PRIVATE)
+        currLvl = sp.getInt(Constant.BUNDLE_ARGS.currentLvl, 0)
     }
 
     private fun setupDisplay(){
@@ -41,9 +67,10 @@ class MenuActivity : AppCompatActivity() {
         display.getSize(size)
         val x = size.x
         val y = size.y
-        h = x / (3)
-
-        createLvl()
+        svContainer.post {
+            h = (svContainer.width-(6*margin)) / (3)
+            createLvl()
+        }
     }
 
     private fun createLvl(){
@@ -64,7 +91,9 @@ class MenuActivity : AppCompatActivity() {
 
     private fun lvlBtn(): Button {
         val btn = Button(this)
-        btn.layoutParams = LinearLayout.LayoutParams(h,h)
+        val params = LinearLayout.LayoutParams(h,h)
+        params.setMargins(margin, margin, margin, margin)
+        btn.layoutParams = params
         btn.id = View.generateViewId()
         btn.text = lvl.toString()
         when {
@@ -77,7 +106,6 @@ class MenuActivity : AppCompatActivity() {
             else -> {
                 btn.setTextColor(Color.WHITE)
                 btn.setBackgroundResource(R.drawable.rounded_disable_btn)
-//                btn.isClickable = false
             }
         }
         lvl++
