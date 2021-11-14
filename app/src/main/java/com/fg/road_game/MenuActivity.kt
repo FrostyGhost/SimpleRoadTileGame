@@ -8,10 +8,14 @@ import android.graphics.Color
 import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.core.view.size
 import com.fg.road_game.editor.CreateLvlActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -31,14 +35,12 @@ class MenuActivity : AppCompatActivity() {
     private var h: Int = 300
 
     private lateinit var sp: SharedPreferences
-    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
+    private var doubleBackToExitPressedOnce: Boolean = false
+    val TWO_SEC = 2000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        firebaseAnalytics = Firebase.analytics
-//        firebaseAnalytics = FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_menu2)
     }
 
@@ -73,7 +75,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun createLvl(){
-        for ( y in 0 until 10){
+        for ( y in 0 until 16){
             for (x in 0 until 3){
                 if (x == 0){
                     val linearLayout = LinearLayout(this)
@@ -142,10 +144,17 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
-    private fun logError(error :String?){
-        firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.GAME_ERROR) {
-            param(FirebaseAnalyticsConst.LVL_ERROR, error?: "menu error")
-        }
-    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        this.finishAffinity();
+//        if (doubleBackToExitPressedOnce){
+//            onDestroy()
+//        }
+//
+//        doubleBackToExitPressedOnce = true
+//        Handler(Looper.getMainLooper()).postDelayed(
+//            { doubleBackToExitPressedOnce = false }, TWO_SEC
+//        )
+    }
 }

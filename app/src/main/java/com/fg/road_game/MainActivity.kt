@@ -2,9 +2,13 @@ package com.fg.road_game
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Point
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
@@ -20,6 +24,8 @@ import com.google.firebase.analytics.ktx.logEvent
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
+import java.util.concurrent.TimeUnit
+import kotlin.collections.ArrayList
 
 
 class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
@@ -43,10 +49,17 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
 
     var testLvLString = false
 
+    var timeAfterStart :Long = 0L
+
+    private var isWinDialogOpened = false
+
     private lateinit var sp: SharedPreferences
 
     private lateinit var tileModelList : List<TileModel>
     private lateinit var firebaseAnalytics: FirebaseAnalytics
+
+    private var soundPool: SoundPool? = null
+    private val soundId = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +71,8 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
 
         initRowList()
         getArgs()
+        setupTimer()
+        setupSound()
     }
 
     private fun getArgs(){
@@ -89,6 +104,15 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
         }
     }
 
+    private fun setupSound(){
+        soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool!!.load(baseContext, R.raw.audio, 1)
+    }
+
+    private fun playSound() {
+        soundPool?.play(soundId, 1F, 1F, 0, 0, 1F)
+    }
+
     private fun createGameBoard(){
         setScreenSize()
         initMatrix(matrixY, matrixX)
@@ -103,7 +127,7 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
                 }
             }
         }
-        //це дял дейкстри, якщо відкину цей варік то видалити
+
         setupTileVertexList()
     }
 
@@ -151,10 +175,10 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
                         || tiles[v.id].tileBg == 7
                         || tiles[v.id].tileBg == 8
                         || tiles[v.id].tileBg == 3)){
-
-                    Log.e("QQ", "fdsfadsfdsa");
                     //тут розвертаємо блок
                     tile.rotateTile()
+
+                    playSound()
 
                     //глибина
                     //createGraph()
@@ -250,98 +274,59 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
             }
     }
 
-// TODO дивись тут знизу метод пошуку в глибину, я його чуть пізніше видалю, вибач за засраний код
-
-//    private fun createGraph() {
-//        vertex.clear()
-//
-//        var start = -1
-//        var end = -1
-//        var edgePos = 0;
-//        for (tile in tiles){
-//            if (tile.tileBg == 5
-//                    || tile.tileBg == 6
-//                    || tile.tileBg == 7
-//                    || tile.tileBg == 8){
-//                if (start == -1){
-//                    start = tile.arrayPos
-//                }else{
-//                    end = tile.arrayPos
-//                }
-//            }
-//            if(tile.edgePos >= 0){
-//                vertex.add(DepthFirstSearch.Vertex(tile.arrayPos))
-//                tile.edgePos = edgePos
-//                edgePos++
-//            }
-//        }
-//
-//        for (tile in tiles){
-//            if (tile.tileBg != 9){
-//                isConnected(tile)
-//            }
-//        }
-//
-//        depthFirstSearchExampleNeighbourList.directions.clear()
-//        depthFirstSearchExampleNeighbourList.endPos = end
-//        if (!vertex.isNullOrEmpty()){
-//            depthFirstSearchExampleNeighbourList.dfs(vertex[0])
-//        }
-//
-//    }
-//
-//    //тут є питання
-//    @SuppressLint("SetTextI18n")
-//    private fun isConnected(tile: GameTile) {
-//        if (tile.edgePos != -1){
-//            if (tile.rightPos == 1
-//                && (inBounds(tile.arrayPos +1,tiles.size)
-//                        && tiles[tile.arrayPos +1].leftPos == 1)){
-//                vertex[tile.edgePos].addEdge(vertex[tiles[tile.arrayPos + 1].edgePos])
-//            }
-//            if (tile.leftPos == 1
-//                && (inBounds(tile.arrayPos -1,tiles.size)
-//                        && tiles[tile.arrayPos -1].rightPos == 1)){
-//                vertex[tile.edgePos].addEdge(vertex[tiles[tile.arrayPos - 1].edgePos])
-//            }
-//            if (tile.topPos == 1
-//                && (inBounds(tile.arrayPos - matrixX,tiles.size)
-//                        && tiles[tile.arrayPos - matrixX].bottomPos == 1)){
-//                vertex[tile.edgePos].addEdge(vertex[tiles[tile.arrayPos - matrixX].edgePos])
-//            }
-//            if (tile.bottomPos == 1){
-//                Log.e("QQ","bottom true")
-//                if (inBounds(tile.arrayPos +matrixX,tiles.size)
-//                                && tiles[tile.arrayPos +matrixX].topPos == 1){
-//                    vertex[tile.edgePos].addEdge(vertex[tiles[tile.arrayPos +matrixX].edgePos])
-//                    Log.e("QQ","bottom true true")
-//
-//                }
-//            }
-//
-//        }
-//    }
-
     private fun inBounds(index: Int, length: Int) : Boolean{
         return index in 0 until length
     }
 
     override fun isFinish(isFinish: Boolean) {
         if (isFinish){
-            Toast.makeText(this, "ПЕРЕМОГА",Toast.LENGTH_SHORT).show()
-            Log.e("QQ", "Вийшло")
-
             if (!testLvLString && selectedLvl != -1 && sp.getInt(Constant.BUNDLE_ARGS.currentLvl, 0) == selectedLvl){
                 sp.edit().putInt(Constant.BUNDLE_ARGS.currentLvl, sp.getInt(Constant.BUNDLE_ARGS.currentLvl, -1) +1 ).apply();
                 Log.e("QQ", " зберегло ")
             }
 
+            Log.e("QQ", "Вийшло")
+
             logEndGame(selectedLvl.toString())
+
+            openWinDialog()
         }else{
             Log.e("QQ", "Не Вийшло")
         }
     }
 
+    private fun openWinDialog() {
+        isWinDialogOpened = true
+        val dialog = WinDialog(timeAfterStart, selectedLvl+1)
+        dialog.show(supportFragmentManager, dialog.tag)
+        Log.e("QQ", "$timeAfterStart")
+    }
+
+    private fun setupTimer(){
+        val timer = object: CountDownTimer(TimeUnit.MINUTES.toMillis(5), TimeUnit.SECONDS.toMillis(1)) {
+            override fun onTick(millisUntilFinished: Long) {
+                timeAfterStart +=1
+            }
+
+            override fun onFinish() {
+                Log.e("QQ ", "restart timer")
+
+                setupTimer()
+                logRestartTimer(selectedLvl.toString())
+            }
+        }
+        timer.start()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        openMenu()
+    }
+
+    private fun openMenu(){
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
+    }
 
     private fun initRowList(){
         rowsList.add(row_1)
@@ -371,6 +356,12 @@ class MainActivity : AppCompatActivity() , DepthFirstSearch.OnFinish{
 
     private fun logStartGame(selectedLvl :String?){
         firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.START_GAME) {
+            param(FirebaseAnalyticsConst.LVL_NAME, selectedLvl?: "do not selected")
+        }
+    }
+
+    private fun logRestartTimer(selectedLvl :String?){
+        firebaseAnalytics?.logEvent(FirebaseAnalyticsConst.RESTART_TIMER) {
             param(FirebaseAnalyticsConst.LVL_NAME, selectedLvl?: "do not selected")
         }
     }

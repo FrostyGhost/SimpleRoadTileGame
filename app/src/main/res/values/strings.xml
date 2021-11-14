@@ -3,6 +3,11 @@
     <string name="save_copy"><![CDATA[Save & Copy]]></string>
 
 
+
+    <string name="win_title">Гарна робота!</string>
+    <string name="win_next_btn">Наступний рівень</string>
+
+    <!-- рівні -->
     <string name="lvl_1">
        {"gameId":"0","modelList":[
         {"tileBg":5,"rotatePos":0,"topPos":0,"bottomPos":1,"leftPos":0,"rightPos":0,"arrayPos":0,"edgePos":1},

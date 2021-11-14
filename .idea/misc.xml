@@ -3,9 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/ic_border.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/ic_bottom_road.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/ic_road3.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/ic_road4.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/rounded_current_btn.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable-v24/rounded_lvl_btn.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable/ic_content_save_move_outline.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable/ic_rotate_left.xml" value="0.3974358974358974" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/drawable/win_dialog_bg.xml" value="0.3974358974358974" />
         <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/layout/activity_main.xml" value="0.3875" />
         <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/layout/activity_menu2.xml" value="0.3875" />
         <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/layout/create_lvl.xml" value="0.3875" />
+        <entry key="..\:/Users/FrostyGhost/StudioProjects/BlaBlaBla/app/src/main/res/layout/win_dialog_fragment.xml" value="0.33" />
       </map>
     </option>
   </component>
